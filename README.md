@@ -37,6 +37,69 @@ Extensive experiments on standard underwater benchmark datasets show that DD-UIE
 
 ---
 
+
+## 🚀 Get Started
+
+### 1. Clone the repository:
+
+   ```bash
+   git clone xxxxx
+   cd DD-UIE
+   ```
+
+To set up the environment for this project, follow the steps below:
+
+### 2. Create and Activate Conda Environment
+
+```bash
+conda create -n your_env_name python=3.10
+conda activate your_env_name
+```
+
+### 3. Install PyTorch with CUDA Support
+
+```bash
+conda install pytorch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 pytorch-cuda=11.8 -c pytorch -c nvidia
+```
+
+### 3. Install CUDA Compiler (nvcc)
+
+```bash
+conda install -c "nvidia/label/cuda-11.8.0" cuda-nvcc
+```
+
+### 4. Install Additional Dependencies
+
+```bash
+conda install packaging
+pip install timm
+pip install scikit-image
+pip install opencv-python
+pip install causal-conv1d==1.1.1
+pip install mamba-ssm==1.1.1
+```
+
+If you cannot install causal-conv1d and mamba-ssm, you can download the whl file we provide and install it directly using the local whl file. The download link is [causal-conv1d](https://drive.google.com/file/d/1Os8ibqmPF6ldN1EBBruY-90R8XERzG1K/view?usp=sharing) and [mamba-ssm](https://drive.google.com/file/d/1qj7VwDPMpCo0bpJLm4KLGwoCZhpAQenx/view?usp=sharing). Then run,
+
+```bash
+pip install causal_conv1d-1.2.0.post2+cu118torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64
+pip install mamba_ssm-1.1.1+cu118torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64
+```
+
+
+### 🚀 Training
+
+If you need to train DD-UIE from scratch, you need to download the LSUI dataset, and then randomly select 3879 picture pairs as the training set to replace the data folder, and the remaining 400 as the test set to replace the test folder.
+
+Then, run the `train.py`, and the trained model weight file will be automatically saved in saved_ Models folder. 
+
+
+
+## 📊 Testing
+For your convenience, we provide some example datasets in `./data` folder. 
+
+After downloading, extract the pretrained model into the `./saved_models` folder, and then run `test.py`. The code will use the pretrained model to automatically process all the images in the `./data/Test_400/input` folder and output the results to the `./data/Test_400/output` folder. 
+
 ## 💾 Repository Structure (ECE 592 Project)
 
 A simplified view of the key files used in the course project:
