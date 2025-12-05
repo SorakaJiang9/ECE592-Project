@@ -43,8 +43,8 @@ Extensive experiments on standard underwater benchmark datasets show that DD-UIE
 ### 1. Clone the repository:
 
    ```bash
-   git clone xxxxx
-   cd DD-UIE
+   git clone https://github.com/SorakaJiang9/ECE592-Project.git
+   cd ECE592-Project
    ```
 
 To set up the environment for this project, follow the steps below:
