@@ -38,7 +38,7 @@ Extensive experiments on standard underwater benchmark datasets show that DD-UIE
 ---
 
 
-## 🚀 Get Started
+## ✈️ Get Started
 
 ### 1. Clone the repository:
 
